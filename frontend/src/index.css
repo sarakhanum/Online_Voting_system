@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-family: 'Inter', system-ui, sans-serif;
+  --bg: #eef2ff;
+  --surface: rgba(255, 255, 255, 0.9);
+  --surface-strong: rgba(255, 255, 255, 0.95);
+  --text: #111827;
+  --muted: #475569;
+  --border: rgba(148, 163, 184, 0.35);
+  --card: rgba(255, 255, 255, 0.78);
+  --card-strong: rgba(255, 255, 255, 0.9);
+  --bg-gradient: linear-gradient(135deg, #eef2ff 0%, #e2e8f0 100%);
+  --auth-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.dark {
+  color-scheme: dark;
+  --bg: #020617;
+  --surface: rgba(15, 23, 42, 0.88);
+  --surface-strong: rgba(15, 23, 42, 0.98);
+  --text: #eff6ff;
+  --muted: #cbd5e1;
+  --border: rgba(148, 163, 184, 0.2);
+  --card: rgba(15, 23, 42, 0.78);
+  --card-strong: rgba(15, 23, 42, 0.92);
+  --bg-gradient: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  --auth-bg: linear-gradient(135deg, #0f172a 0%, #111827 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: radial-gradient(circle at top, rgba(99, 102, 241, 0.15), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.18), transparent 28%),
+    var(--bg-gradient);
+  color: var(--text);
+  overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.app-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, rgba(99, 102, 241, 0.12), transparent 35%),
+    rgba(255, 255, 255, 0.72);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  border: 6px solid rgba(59, 130, 246, 0.25);
+  border-top-color: rgba(59, 130, 246, 0.9);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.glass-card {
+  background: var(--surface);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 30px 75px rgba(15, 23, 42, 0.35);
+}
+
+.glow-button {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.glow-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 35px rgba(59, 130, 246, 0.28);
+}
+
+@media (max-width: 640px) {
+  body {
+    background-position: center;
+  }
+}
