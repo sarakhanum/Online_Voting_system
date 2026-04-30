@@ -1,0 +1,43 @@
+/* ================= GLOBAL RESET ================= */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ================= THEME VARIABLES ================= */
+
+/* 🌞 LIGHT MODE (default) */
+:root {
+  --auth-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --card-strong: rgba(255, 255, 255, 0.95);
+  --text: #111;
+  --muted: #555;
+}
+
+/* 🌙 DARK MODE */
+.dark {
+  --auth-bg: radial-gradient(circle at top, #0f172a, #020617);
+  --card-strong: rgba(15, 23, 42, 0.85);
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+}
+
+/* ================= BASE STYLES ================= */
+
+body {
+  background: var(--auth-bg);
+  color: var(--text);
+  transition: background 0.4s ease, color 0.3s ease;
+}
+
+/* ================= OPTIONAL GLOBAL FIXES ================= */
+
+/* Smooth transitions */
+* {
+  transition: background 0.3s ease, color 0.2s ease, border 0.2s ease;
+}
+
+/* Remove default styles */
+a {
+  text-decoration: none;
+}
