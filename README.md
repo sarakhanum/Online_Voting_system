@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Online Voting System
 
 This repository contains a full-stack Online Voting System.
@@ -61,3 +62,6 @@ The frontend will run at `http://localhost:3000/`.
 - The backend uses SQLite by default for local development.
 - If you want PostgreSQL, update `backend/backend/settings.py` and install `psycopg2-binary`.
 - Make sure CORS is enabled for the frontend.
+=======
+# Online_Voting_system
+>>>>>>> ab0f12f4adff8648fdc508575bb157defe0fc5dd
